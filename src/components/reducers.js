@@ -1,5 +1,3 @@
-// reducers.js
-
 import { createSlice } from '@reduxjs/toolkit';
 
 const counterSlice = createSlice({

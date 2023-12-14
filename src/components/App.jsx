@@ -1,8 +1,6 @@
-// components/App.js
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { increment, decrement } from './reducers'; // ajustează calea în funcție de structura proiectului
-
+import { increment, decrement } from './reducers';
 export const App = () => {
   const counter = useSelector(state => state.counter);
   const dispatch = useDispatch();
