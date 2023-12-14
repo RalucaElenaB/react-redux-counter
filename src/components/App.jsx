@@ -1,16 +1,17 @@
+// components/App.js
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { increment, decrement } from './reducers'; // ajustează calea în funcție de structura proiectului
+
 export const App = () => {
+  const counter = useSelector(state => state.counter);
+  const dispatch = useDispatch();
+
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
+    <div>
+      <h1>Counter: {counter}</h1>
+      <button onClick={() => dispatch(increment())}>Increment</button>
+      <button onClick={() => dispatch(decrement())}>Decrement</button>
     </div>
   );
 };
